@@ -1,519 +1,498 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
-\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red212\green212\blue212;\red167\green197\blue152;
-\red113\green192\blue131;\red109\green115\blue120;\red183\green111\blue247;\red54\green192\blue160;\red246\green124\blue48;
-}
-{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
-\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c86275\c86275\c86275;\cssrgb\c70980\c80784\c65882;
-\cssrgb\c50588\c78824\c58431;\cssrgb\c50196\c52549\c54510;\cssrgb\c77255\c54118\c97647;\cssrgb\c23922\c78824\c69020;\cssrgb\c98039\c56471\c24314;
-}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Pengurusan Kurikulum Digital - SJKT Kuala Lipis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(30, 42, 71, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-purple: #6C5DD3;
+            --accent-blue: #4D7CFE;
+            --accent-green: #00D18F;
+            --accent-orange: #FF8A3D;
+            --accent-red: #FF4D6D;
+        }
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 <\cf2 \strokec2 html\cf5 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf7 \strokec7 "ms"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf7 \strokec7 "UTF-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf7 \strokec7 "viewport"\cf5 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \strokec5 Portal Pengurusan Kurikulum Digital - SJKT Kuala Lipis\cf6 \strokec6 </\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://unpkg.com/lucide@latest"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 link\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf7 \strokec7 "stylesheet"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 :root\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --glass-bg:\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 30\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 42\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 71\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.6\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --glass-border:\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.1\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --accent-purple:\cf5 \strokec5  #6C5DD3\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --accent-blue:\cf5 \strokec5  #4D7CFE\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --accent-green:\cf5 \strokec5  #00D18F\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --accent-orange:\cf5 \strokec5  #FF8A3D\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 --accent-red:\cf5 \strokec5  #FF4D6D\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 body\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 font-family:\cf5 \strokec5  \cf10 \strokec10 'Poppins'\cf8 \strokec8 ,\cf5 \strokec5  \cf7 \strokec7 sans-serif\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 135deg\cf8 \strokec8 ,\cf5 \strokec5  #0f172a \cf9 \strokec9 0%\cf8 \strokec8 ,\cf5 \strokec5  #1e293b \cf9 \strokec9 50%\cf8 \strokec8 ,\cf5 \strokec5  #0f172a \cf9 \strokec9 100%\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background-attachment:\cf5 \strokec5  \cf7 \strokec7 fixed\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 color:\cf5 \strokec5  \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 min-height:\cf5 \strokec5  \cf9 \strokec9 100vh\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .glass-card\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 var(--glass-bg)\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 backdrop-filter:\cf5 \strokec5  \cf7 \strokec7 blur(\cf9 \strokec9 12px\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 -webkit-backdrop-filter:\cf5 \strokec5  \cf7 \strokec7 blur(\cf9 \strokec9 12px\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf9 \strokec9 1px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  \cf7 \strokec7 var(--glass-border)\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf9 \strokec9 1.5rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf9 \strokec9 0\cf5 \strokec5  \cf9 \strokec9 8px\cf5 \strokec5  \cf9 \strokec9 32px\cf5 \strokec5  \cf9 \strokec9 0\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.3\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 transition:\cf5 \strokec5  \cf7 \strokec7 transform\cf5 \strokec5  \cf9 \strokec9 0.3s\cf5 \strokec5  \cf7 \strokec7 ease\cf8 \strokec8 ,\cf5 \strokec5  \cf7 \strokec7 box-shadow\cf5 \strokec5  \cf9 \strokec9 0.3s\cf5 \strokec5  \cf7 \strokec7 ease\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .glass-card:hover\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 transform:\cf5 \strokec5  \cf7 \strokec7 translateY(\cf9 \strokec9 -4px\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf9 \strokec9 0\cf5 \strokec5  \cf9 \strokec9 12px\cf5 \strokec5  \cf9 \strokec9 40px\cf5 \strokec5  \cf9 \strokec9 0\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.4\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf9 \strokec9 1px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.2\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .sidebar-link\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 align-items:\cf5 \strokec5  \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 padding:\cf5 \strokec5  \cf9 \strokec9 0.75rem\cf5 \strokec5  \cf9 \strokec9 1rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf9 \strokec9 0.75rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 transition:\cf5 \strokec5  \cf7 \strokec7 all\cf5 \strokec5  \cf9 \strokec9 0.2s\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 color:\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 255\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.7\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .sidebar-link:hover\cf8 \strokec8 ,\cf5 \strokec5  \cf2 \strokec2 .sidebar-link.active\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 var(--accent-purple)\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 color:\cf5 \strokec5  \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .search-bar\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 15\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 23\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 42\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 0.5\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf9 \strokec9 1px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  \cf7 \strokec7 var(--glass-border)\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf9 \strokec9 9999px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 backdrop-filter:\cf5 \strokec5  \cf7 \strokec7 blur(\cf9 \strokec9 4px\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .status-badge\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 font-size:\cf5 \strokec5  \cf9 \strokec9 0.65rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 padding:\cf5 \strokec5  \cf9 \strokec9 0.1rem\cf5 \strokec5  \cf9 \strokec9 0.5rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf9 \strokec9 4px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf9 \strokec9 600\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 text-transform:\cf5 \strokec5  \cf7 \strokec7 uppercase\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf11 \strokec11 /* Bento Grid Custom Heights */\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 .bento-container\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 grid\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 grid-template-columns:\cf5 \strokec5  \cf7 \strokec7 repeat(\cf9 \strokec9 12\cf8 \strokec8 ,\cf5 \strokec5  \cf9 \strokec9 1fr\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 gap:\cf5 \strokec5  \cf9 \strokec9 1.5rem\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .btn-gradient-blue\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 90deg\cf8 \strokec8 ,\cf5 \strokec5  #4D7CFE\cf8 \strokec8 ,\cf5 \strokec5  #2563eb\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 .btn-gradient-purple\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 90deg\cf8 \strokec8 ,\cf5 \strokec5  #6C5DD3\cf8 \strokec8 ,\cf5 \strokec5  #5b4dbd\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 .btn-gradient-green\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 90deg\cf8 \strokec8 ,\cf5 \strokec5  #00D18F\cf8 \strokec8 ,\cf5 \strokec5  #059669\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 .btn-gradient-orange\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 90deg\cf8 \strokec8 ,\cf5 \strokec5  #FF8A3D\cf8 \strokec8 ,\cf5 \strokec5  #ea580c\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3         \cf2 \strokec2 .btn-gradient-red\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 background:\cf5 \strokec5  \cf7 \strokec7 linear-gradient(\cf9 \strokec9 90deg\cf8 \strokec8 ,\cf5 \strokec5  #FF4D6D\cf8 \strokec8 ,\cf5 \strokec5  #dc2626\cf7 \strokec7 )\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf2 \strokec2 .line-chart-svg\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 filter:\cf5 \strokec5  \cf7 \strokec7 drop-shadow(\cf9 \strokec9 0\cf5 \strokec5  \cf9 \strokec9 0\cf5 \strokec5  \cf9 \strokec9 5px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf9 \strokec9 255\cf8 \strokec8 ,\cf9 \strokec9 255\cf8 \strokec8 ,\cf9 \strokec9 255\cf8 \strokec8 ,\cf9 \strokec9 0.3\cf7 \strokec7 ))\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         @\cf2 \strokec2 media\cf5 \strokec5  (\cf2 \strokec2 max-width:\cf5 \strokec5  1024\cf2 \strokec2 px\cf5 \strokec5 ) \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             .sidebar \{ \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 none\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3             \cf2 \strokec2 .main-content\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  \cf4 \strokec4 padding-left:\cf5 \strokec5  \cf9 \strokec9 1rem\cf5 \strokec5  \cf12 \strokec12 !important\cf8 \strokec8 ;\cf5 \strokec5  \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\cb3         \}\cb1 \
-\cb3     \cf6 \strokec6 </\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf2 \strokec2 body\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-4 md:p-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex max-w-[1600px] mx-auto gap-6 h-full"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cb1 \
-\cb3         \cf11 \strokec11 <!-- SIDEBAR -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf2 \strokec2 aside\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar w-64 flex-shrink-0 flex flex-col gap-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6 flex flex-col items-center text-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16 mb-4 bg-white rounded-full p-2 flex items-center justify-center overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf11 \strokec11 <!-- Placeholder Logo Sekolah -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 img\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png"\cf5 \strokec5  \cf4 \strokec4 alt\cf6 \strokec6 =\cf7 \strokec7 "Logo Sekolah"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "object-contain"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg leading-tight"\cf6 \strokec6 >\cf5 \strokec5 SJKT KUALA LIPIS\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-300 mt-1"\cf6 \strokec6 >\cf5 \strokec5 Portal Kurikulum\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 nav\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 flex-grow space-y-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link active"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "layout-dashboard"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Dashboard\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "layers"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Aplikasi \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "chevron-right"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-auto"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 ></\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "folder-open"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Dokumen \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "chevron-right"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-auto"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 ></\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "calendar"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Takwim & Jadual \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "chevron-right"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-auto"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 ></\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "users"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Mesyuarat\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "graduation-cap"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Kurikulum & PBD\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "eye"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Pencerapan\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "clipboard-list"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Program & OPR\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "megaphone"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Pengumuman\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "sidebar-link"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "help-circle"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Bantuan\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 nav\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3 mb-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 rounded-full bg-blue-500 overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 img\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"\cf5 \strokec5  \cf4 \strokec4 alt\cf6 \strokec6 =\cf7 \strokec7 "User"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs font-bold"\cf6 \strokec6 >\cf5 \strokec5 Cikgu Nitya\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-[10px] text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Guru Pentadbiran\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "chevron-down"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 ml-auto opacity-50"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 bg-red-500/20 text-red-400 rounded-lg text-sm flex items-center justify-center hover:bg-red-500/30 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "log-out"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-2"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Log Keluar\cb1 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf2 \strokec2 aside\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf11 \strokec11 <!-- MAIN CONTENT -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf2 \strokec2 main\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex-grow space-y-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf11 \strokec11 <!-- TOP BAR -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 header\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between gap-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex-grow max-w-2xl relative"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 input\cf5 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf7 \strokec7 "text"\cf5 \strokec5  \cf4 \strokec4 placeholder\cf6 \strokec6 =\cf7 \strokec7 "Cari aplikasi, dokumen, jadual, minit mesyuarat..."\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "search-bar w-full py-3 px-12 focus:outline-none focus:ring-2 focus:ring-purple-500/50"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "search"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "relative glass-card p-2 rounded-full cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "bell"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "absolute top-0 right-0 bg-red-500 text-[10px] w-4 h-4 flex items-center justify-center rounded-full border-2 border-[#1e293b]"\cf6 \strokec6 >\cf5 \strokec5 3\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 header\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf11 \strokec11 <!-- HERO SECTION -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "absolute -right-10 -bottom-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cb1 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/20"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf11 \strokec11 <!-- Logo Utama -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 img\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png"\cf5 \strokec5  \cf4 \strokec4 alt\cf6 \strokec6 =\cf7 \strokec7 "Logo"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-16 h-16"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex-grow"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 h1\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-3xl font-bold mb-2"\cf6 \strokec6 >\cf5 \strokec5 Selamat datang, warga SJKT Kuala Lipis \uc0\u55357 \u56395 \cf6 \strokec6 </\cf2 \strokec2 h1\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 Portal Pengurusan Kurikulum Digital\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-gray-400 mt-1 font-light italic"\cf6 \strokec6 >\cf5 \strokec5 \'93Satu Pusat Digital Untuk Semua Urusan Kurikulum Sekolah.\'94\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card bg-black/20 p-4 text-center min-w-[160px]"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "clock"\cf6 \strokec6 >\cf5 \strokec5 10:30 AM\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-gray-400"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "date-string"\cf6 \strokec6 >\cf5 \strokec5 Selasa, 6 Mei 2026\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf11 \strokec11 <!-- STATISTICS GRID -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-1 md:grid-cols-4 gap-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-2 rounded-lg bg-purple-500/20 text-purple-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "grid"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold leading-none"\cf6 \strokec6 >\cf5 \strokec5 8\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Aplikasi Aktif\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 svg\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "line-chart-svg h-10 w-full"\cf5 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 100 20"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 path\cf5 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf7 \strokec7 "M0 15 Q 10 5, 20 12 T 40 8 T 60 15 T 80 5 T 100 10"\cf5 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf5 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf7 \strokec7 "#6C5DD3"\cf5 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf7 \strokec7 "2"\cf6 \strokec6 />\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-2 rounded-lg bg-blue-500/20 text-blue-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-text"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold leading-none"\cf6 \strokec6 >\cf5 \strokec5 42\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Dokumen\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 svg\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "line-chart-svg h-10 w-full"\cf5 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 100 20"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 path\cf5 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf7 \strokec7 "M0 10 Q 15 18, 30 10 T 60 5 T 100 12"\cf5 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf5 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf7 \strokec7 "#4D7CFE"\cf5 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf7 \strokec7 "2"\cf6 \strokec6 />\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-2 rounded-lg bg-green-500/20 text-green-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "check-square"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold leading-none"\cf6 \strokec6 >\cf5 \strokec5 5\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Tugasan Minggu Ini\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 svg\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "line-chart-svg h-10 w-full"\cf5 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 100 20"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 path\cf5 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf7 \strokec7 "M0 18 Q 20 5, 40 15 T 70 8 T 100 10"\cf5 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf5 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf7 \strokec7 "#00D18F"\cf5 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf7 \strokec7 "2"\cf6 \strokec6 />\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-2 rounded-lg bg-orange-500/20 text-orange-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "megaphone"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-6 h-6"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold leading-none"\cf6 \strokec6 >\cf5 \strokec5 3\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Pengumuman\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 svg\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "line-chart-svg h-10 w-full"\cf5 \strokec5  \cf4 \strokec4 viewBox\cf6 \strokec6 =\cf7 \strokec7 "0 0 100 20"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 path\cf5 \strokec5  \cf4 \strokec4 d\cf6 \strokec6 =\cf7 \strokec7 "M0 12 Q 25 15, 50 10 T 75 18 T 100 5"\cf5 \strokec5  \cf4 \strokec4 fill\cf6 \strokec6 =\cf7 \strokec7 "none"\cf5 \strokec5  \cf4 \strokec4 stroke\cf6 \strokec6 =\cf7 \strokec7 "#FF8A3D"\cf5 \strokec5  \cf4 \strokec4 stroke-width\cf6 \strokec6 =\cf7 \strokec7 "2"\cf6 \strokec6 />\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 svg\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf11 \strokec11 <!-- MAIN BENTO GRID -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-12 gap-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cb1 \
-\cb3                 \cf11 \strokec11 <!-- AKSES PANTAS (Left side - Large) -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "col-span-12 lg:col-span-8 space-y-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between mb-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg flex items-center"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "zap"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-2 text-yellow-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  AKSES PANTAS APLIKASI\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-400 hover:underline"\cf6 \strokec6 >\cf5 \strokec5 Lihat Semua\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-2 sm:grid-cols-4 gap-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 1 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-blue-600/20 to-transparent border-blue-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-blue-500/30 rounded-lg flex items-center justify-center mb-3 text-blue-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "book-open"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Laporan Bacaan Murid\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 btn-gradient-blue text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 BUKA SISTEM\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 2 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-purple-600/20 to-transparent border-purple-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-purple-500/30 rounded-lg flex items-center justify-center mb-3 text-purple-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "users"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Kehadiran Mesyuarat\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 btn-gradient-purple text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 ISI KEHADIRAN\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 3 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-green-600/20 to-transparent border-green-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-green-500/30 rounded-lg flex items-center justify-center mb-3 text-green-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "shield-check"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Pengesahan Madaniat\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 btn-gradient-green text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 SAHKAN SEKARANG\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 4 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-orange-600/20 to-transparent border-orange-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-orange-500/30 rounded-lg flex items-center justify-center mb-3 text-orange-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "bar-chart-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 PBD Digital Sekolah\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 btn-gradient-orange text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 BUKA PBD\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 5 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-red-600/20 to-transparent border-red-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-red-500/30 rounded-lg flex items-center justify-center mb-3 text-red-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-signature"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Surat Pelantikan Guru\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 btn-gradient-red text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 JANA SURAT\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 6 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-teal-600/20 to-transparent border-teal-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-teal-500/30 rounded-lg flex items-center justify-center mb-3 text-teal-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "id-card"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Kad Digital DELIMa\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 bg-teal-600 text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 JANA KAD\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 7 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gradient-to-br from-indigo-600/20 to-transparent border-indigo-500/20 group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-indigo-500/30 rounded-lg flex items-center justify-center mb-3 text-indigo-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "clipboard-check"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Pencerapan Guru\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 bg-indigo-600 text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 BUKA BORANG\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf11 \strokec11 <!-- Card 8 -->\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-4 bg-gray-600/10 border-gray-500/20 cursor-not-allowed opacity-60"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-10 h-10 bg-gray-500/30 rounded-lg flex items-center justify-center mb-3 text-gray-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "rocket"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-3"\cf6 \strokec6 >\cf5 \strokec5 Sistem Lain (Akan Datang)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 bg-gray-700 text-[10px] rounded-lg font-bold"\cf6 \strokec6 >\cf5 \strokec5 AKAN DATANG\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                     \cf11 \strokec11 <!-- REPOSITORI DOKUMEN -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between mb-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg flex items-center"\cf6 \strokec6 ><\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "folder"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-2 text-blue-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  REPOSITORI DOKUMEN TERKINI\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-400 hover:underline"\cf6 \strokec6 >\cf5 \strokec5 Lihat Semua\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overflow-x-auto"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 table\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full text-left text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 thead\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 text-xs uppercase border-b border-white/10"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 th\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 font-medium"\cf6 \strokec6 >\cf5 \strokec5 Nama Dokumen\cf6 \strokec6 </\cf2 \strokec2 th\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 th\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 font-medium"\cf6 \strokec6 >\cf5 \strokec5 Format\cf6 \strokec6 </\cf2 \strokec2 th\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 th\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 font-medium text-right"\cf6 \strokec6 >\cf5 \strokec5 Tarikh\cf6 \strokec6 </\cf2 \strokec2 th\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 thead\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 tbody\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "divide-y divide-white/5"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 tr\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hover:bg-white/5 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 flex items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-text"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-2 text-red-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Takwim Sekolah 2026\cb1 \
-\cb3                                         \cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3"\cf6 \strokec6 ><\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-red-500/20 text-red-400 text-[10px] px-2 py-1 rounded"\cf6 \strokec6 >\cf5 \strokec5 PDF\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 text-right text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 05/05/2026\cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 tr\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hover:bg-white/5 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 flex items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-text"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-2 text-blue-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Jadual Guru Bertugas Mingguan\cb1 \
-\cb3                                         \cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3"\cf6 \strokec6 ><\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-blue-500/20 text-blue-400 text-[10px] px-2 py-1 rounded"\cf6 \strokec6 >\cf5 \strokec5 PDF\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 text-right text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 04/05/2026\cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 tr\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hover:bg-white/5 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 flex items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-spreadsheet"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-2 text-green-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Agihan Tugas Guru 2026\cb1 \
-\cb3                                         \cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3"\cf6 \strokec6 ><\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded"\cf6 \strokec6 >\cf5 \strokec5 XLSX\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 text-right text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 03/05/2026\cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 tr\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hover:bg-white/5 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 flex items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "file-text"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-2 text-orange-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Minit Mesyuarat Kurikulum Bil.1/2026\cb1 \
-\cb3                                         \cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3"\cf6 \strokec6 ><\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-orange-500/20 text-orange-400 text-[10px] px-2 py-1 rounded"\cf6 \strokec6 >\cf5 \strokec5 DOCX\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 td\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "py-3 text-right text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 02/05/2026\cf6 \strokec6 </\cf2 \strokec2 td\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 tr\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 tbody\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 table\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf11 \strokec11 <!-- SIDE WIDGETS (Right side) -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "col-span-12 lg:col-span-4 space-y-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf11 \strokec11 <!-- PENGUMUMAN PENTING -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6 bg-gradient-to-br from-purple-900/40 to-transparent border-purple-500/30"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-4 text-purple-300"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "megaphone"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-sm uppercase tracking-wider"\cf6 \strokec6 >\cf5 \strokec5 Pengumuman Penting\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-white/5 p-4 rounded-xl border border-white/10"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-2 mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "status-badge bg-red-500 text-white"\cf6 \strokec6 >\cf5 \strokec5 URGENT\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-[10px] text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 31 Mei 2026\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm font-semibold mb-2 leading-snug"\cf6 \strokec6 >\cf5 \strokec5 Kemas kini PBD Fasa 2 perlu diselesaikan selewatnya 31 Mei 2026 (Jumaat).\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-xs font-bold transition"\cf6 \strokec6 >\cf5 \strokec5 BUKA PBD DIGITAL\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex gap-3 items-start border-b border-white/5 pb-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-2 h-2 rounded-full bg-blue-400 mt-1.5"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs font-medium"\cf6 \strokec6 >\cf5 \strokec5 Mesyuarat Kurikulum Bil. 2/2026\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-[10px] text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 7 Mei 2026 (Khamis) | 2:30 petang\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex gap-3 items-start border-b border-white/5 pb-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-2 h-2 rounded-full bg-orange-400 mt-1.5"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs font-medium"\cf6 \strokec6 >\cf5 \strokec5 Hari Guru 2026\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-[10px] text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 Pendaftaran program dibuka!\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 border border-white/10 hover:bg-white/5 rounded-lg text-xs font-medium transition"\cf6 \strokec6 >\cf5 \strokec5 LIHAT SEMUA\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                     \cf11 \strokec11 <!-- TUGASAN MINGGU INI -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-sm uppercase tracking-wider mb-4 flex items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "list-todo"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 mr-2 text-green-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Tugasan Minggu Ini\cb1 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 border-2 border-green-500 rounded flex items-center justify-center bg-green-500 text-white"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                         \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "check"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-3 h-3"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs"\cf6 \strokec6 >\cf5 \strokec5 Isi laporan bacaan pagi\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "status-badge bg-orange-500/20 text-orange-400"\cf6 \strokec6 >\cf5 \strokec5 WAJIB\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 border-2 border-white/20 rounded"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs"\cf6 \strokec6 >\cf5 \strokec5 Sahkan minit mesyuarat\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "status-badge bg-orange-500/20 text-orange-400"\cf6 \strokec6 >\cf5 \strokec5 WAJIB\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center justify-between group cursor-pointer"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center gap-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-5 h-5 border-2 border-white/20 rounded"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs"\cf6 \strokec6 >\cf5 \strokec5 Semak jadual bertugas\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "status-badge bg-blue-500/20 text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 PENTING\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-full py-2 mt-2 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-xs font-bold transition"\cf6 \strokec6 >\cf5 \strokec5 LIHAT SEMUA TUGASAN\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                     \cf11 \strokec11 <!-- PINTASAN POPULAR -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "glass-card p-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-sm uppercase tracking-wider mb-4"\cf6 \strokec6 >\cf5 \strokec5 Pintasan Popular\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "calendar"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-3 text-orange-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Takwim Sekolah\cb1 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "star"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "clock"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-3 text-green-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Jadual Bertugas\cb1 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "star"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "briefcase"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-4 h-4 mr-3 text-blue-400"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \strokec5  Agihan Tugas Guru\cb1 \
-\cb3                                 \cf6 \strokec6 <\cf2 \strokec2 i\cf5 \strokec5  \cf4 \strokec4 data-lucide\cf6 \strokec6 =\cf7 \strokec7 "star"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"\cf6 \strokec6 ></\cf2 \strokec2 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf11 \strokec11 <!-- FOOTER -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf2 \strokec2 footer\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-center py-8 opacity-50 text-xs"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \strokec5 Design by Cikgu Nitya@ChatGPT &bull; &copy; 2026 SJKT Kuala Lipis\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "mt-1"\cf6 \strokec6 >\cf5 \strokec5 Gaya: Glassmorphism + Bento Grid (Moden, Bersih, Mesra Pengguna)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf2 \strokec2 footer\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf6 \strokec6 </\cf2 \strokec2 main\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf11 \strokec11 // Initialize Lucide icons\cf5 \cb1 \strokec5 \
-\cb3         lucide\cf8 \strokec8 .\cf5 \strokec5 createIcons\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf11 \strokec11 // Simple Live Clock\cf5 \cb1 \strokec5 \
-\cb3         \cf12 \strokec12 function\cf5 \strokec5  updateClock\cf8 \strokec8 ()\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \cb1 \strokec5 \
-\cb3             \cf12 \strokec12 const\cf5 \strokec5  now \cf8 \strokec8 =\cf5 \strokec5  \cf12 \strokec12 new\cf5 \strokec5  \cf13 \strokec13 Date\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
-\cb3             \cf12 \strokec12 const\cf5 \strokec5  timeOptions \cf8 \strokec8 =\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  hour\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 '2-digit'\cf8 \strokec8 ,\cf5 \strokec5  minute\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 '2-digit'\cf8 \strokec8 ,\cf5 \strokec5  hour12\cf8 \strokec8 :\cf5 \strokec5  \cf12 \strokec12 true\cf5 \strokec5  \cf8 \strokec8 \};\cf5 \cb1 \strokec5 \
-\cb3             \cf12 \strokec12 const\cf5 \strokec5  dateOptions \cf8 \strokec8 =\cf5 \strokec5  \cf8 \strokec8 \{\cf5 \strokec5  weekday\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 'long'\cf8 \strokec8 ,\cf5 \strokec5  day\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 'numeric'\cf8 \strokec8 ,\cf5 \strokec5  month\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 'long'\cf8 \strokec8 ,\cf5 \strokec5  year\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 'numeric'\cf5 \strokec5  \cf8 \strokec8 \};\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             document\cf8 \strokec8 .\cf5 \strokec5 getElementById\cf8 \strokec8 (\cf10 \strokec10 'clock'\cf8 \strokec8 ).\cf5 \strokec5 textContent \cf8 \strokec8 =\cf5 \strokec5  now\cf8 \strokec8 .\cf5 \strokec5 toLocaleTimeString\cf8 \strokec8 (\cf10 \strokec10 'ms-MY'\cf8 \strokec8 ,\cf5 \strokec5  timeOptions\cf8 \strokec8 ).\cf5 \strokec5 toUpperCase\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf11 \strokec11 // Adjust Malay date names\cf5 \cb1 \strokec5 \
-\cb3             \cf12 \strokec12 let\cf5 \strokec5  dateStr \cf8 \strokec8 =\cf5 \strokec5  now\cf8 \strokec8 .\cf5 \strokec5 toLocaleDateString\cf8 \strokec8 (\cf10 \strokec10 'ms-MY'\cf8 \strokec8 ,\cf5 \strokec5  dateOptions\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
-\cb3             document\cf8 \strokec8 .\cf5 \strokec5 getElementById\cf8 \strokec8 (\cf10 \strokec10 'date-string'\cf8 \strokec8 ).\cf5 \strokec5 textContent \cf8 \strokec8 =\cf5 \strokec5  dateStr\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
-\cb3         \cf8 \strokec8 \}\cf5 \cb1 \strokec5 \
-\
-\cb3         setInterval\cf8 \strokec8 (\cf5 \strokec5 updateClock\cf8 \strokec8 ,\cf5 \strokec5  \cf14 \strokec14 1000\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
-\cb3         updateClock\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf11 \strokec11 // Mobile responsiveness helper (simple toggle logic)\cf5 \cb1 \strokec5 \
-\cb3         \cf11 \strokec11 // Note: For a real app, a proper drawer would be implemented here.\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf2 \strokec2 body\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 </\cf2 \strokec2 html\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .sidebar-link:hover, .sidebar-link.active {
+            background: var(--accent-purple);
+            color: white;
+        }
+
+        .search-bar {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 9999px;
+            backdrop-filter: blur(4px);
+        }
+
+        .status-badge {
+            font-size: 0.65rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Bento Grid Custom Heights */
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .btn-gradient-blue { background: linear-gradient(90deg, #4D7CFE, #2563eb); }
+        .btn-gradient-purple { background: linear-gradient(90deg, #6C5DD3, #5b4dbd); }
+        .btn-gradient-green { background: linear-gradient(90deg, #00D18F, #059669); }
+        .btn-gradient-orange { background: linear-gradient(90deg, #FF8A3D, #ea580c); }
+        .btn-gradient-red { background: linear-gradient(90deg, #FF4D6D, #dc2626); }
+
+        .line-chart-svg {
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar { display: none; }
+            .main-content { padding-left: 1rem !important; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+
+    <div class="flex max-w-[1600px] mx-auto gap-6 h-full">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar w-64 flex-shrink-0 flex flex-col gap-6">
+            <div class="glass-card p-6 flex flex-col items-center text-center">
+                <div class="w-16 h-16 mb-4 bg-white rounded-full p-2 flex items-center justify-center overflow-hidden">
+                    <!-- Placeholder Logo Sekolah -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png" alt="Logo Sekolah" class="object-contain">
+                </div>
+                <h2 class="font-bold text-lg leading-tight">SJKT KUALA LIPIS</h2>
+                <p class="text-xs text-blue-300 mt-1">Portal Kurikulum</p>
+            </div>
+
+            <nav class="glass-card p-4 flex-grow space-y-2">
+                <a href="#" class="sidebar-link active"><i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard</a>
+                <a href="#" class="sidebar-link"><i data-lucide="layers" class="w-5 h-5 mr-3"></i> Aplikasi <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
+                <a href="#" class="sidebar-link"><i data-lucide="folder-open" class="w-5 h-5 mr-3"></i> Dokumen <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
+                <a href="#" class="sidebar-link"><i data-lucide="calendar" class="w-5 h-5 mr-3"></i> Takwim & Jadual <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
+                <a href="#" class="sidebar-link"><i data-lucide="users" class="w-5 h-5 mr-3"></i> Mesyuarat</a>
+                <a href="#" class="sidebar-link"><i data-lucide="graduation-cap" class="w-5 h-5 mr-3"></i> Kurikulum & PBD</a>
+                <a href="#" class="sidebar-link"><i data-lucide="eye" class="w-5 h-5 mr-3"></i> Pencerapan</a>
+                <a href="#" class="sidebar-link"><i data-lucide="clipboard-list" class="w-5 h-5 mr-3"></i> Program & OPR</a>
+                <a href="#" class="sidebar-link"><i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Pengumuman</a>
+                <a href="#" class="sidebar-link"><i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> Bantuan</a>
+            </nav>
+
+            <div class="glass-card p-4">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 overflow-hidden">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold">Cikgu Nitya</p>
+                        <p class="text-[10px] text-gray-400">Guru Pentadbiran</p>
+                    </div>
+                    <i data-lucide="chevron-down" class="w-4 h-4 ml-auto opacity-50"></i>
+                </div>
+                <button class="w-full py-2 bg-red-500/20 text-red-400 rounded-lg text-sm flex items-center justify-center hover:bg-red-500/30 transition">
+                    <i data-lucide="log-out" class="w-4 h-4 mr-2"></i> Log Keluar
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-grow space-y-6">
+            
+            <!-- TOP BAR -->
+            <header class="flex items-center justify-between gap-4">
+                <div class="flex-grow max-w-2xl relative">
+                    <input type="text" placeholder="Cari aplikasi, dokumen, jadual, minit mesyuarat..." class="search-bar w-full py-3 px-12 focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative glass-card p-2 rounded-full cursor-pointer">
+                        <i data-lucide="bell" class="w-6 h-6"></i>
+                        <span class="absolute top-0 right-0 bg-red-500 text-[10px] w-4 h-4 flex items-center justify-center rounded-full border-2 border-[#1e293b]">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- HERO SECTION -->
+            <section class="glass-card p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
+                    <!-- Logo Utama -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png" alt="Logo" class="w-16 h-16">
+                </div>
+
+                <div class="flex-grow">
+                    <h1 class="text-3xl font-bold mb-2">Selamat datang, warga SJKT Kuala Lipis 👋</h1>
+                    <p class="text-blue-200">Portal Pengurusan Kurikulum Digital</p>
+                    <p class="text-sm text-gray-400 mt-1 font-light italic">“Satu Pusat Digital Untuk Semua Urusan Kurikulum Sekolah.”</p>
+                </div>
+
+                <div class="glass-card bg-black/20 p-4 text-center min-w-[160px]">
+                    <p class="text-2xl font-bold" id="clock">10:30 AM</p>
+                    <p class="text-xs text-gray-400" id="date-string">Selasa, 6 Mei 2026</p>
+                </div>
+            </section>
+
+            <!-- STATISTICS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg bg-purple-500/20 text-purple-400">
+                            <i data-lucide="grid" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold leading-none">8</p>
+                            <p class="text-xs text-gray-400">Aplikasi Aktif</p>
+                        </div>
+                    </div>
+                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
+                        <path d="M0 15 Q 10 5, 20 12 T 40 8 T 60 15 T 80 5 T 100 10" fill="none" stroke="#6C5DD3" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg bg-blue-500/20 text-blue-400">
+                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold leading-none">42</p>
+                            <p class="text-xs text-gray-400">Dokumen</p>
+                        </div>
+                    </div>
+                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
+                        <path d="M0 10 Q 15 18, 30 10 T 60 5 T 100 12" fill="none" stroke="#4D7CFE" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg bg-green-500/20 text-green-400">
+                            <i data-lucide="check-square" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold leading-none">5</p>
+                            <p class="text-xs text-gray-400">Tugasan Minggu Ini</p>
+                        </div>
+                    </div>
+                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
+                        <path d="M0 18 Q 20 5, 40 15 T 70 8 T 100 10" fill="none" stroke="#00D18F" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg bg-orange-500/20 text-orange-400">
+                            <i data-lucide="megaphone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold leading-none">3</p>
+                            <p class="text-xs text-gray-400">Pengumuman</p>
+                        </div>
+                    </div>
+                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
+                        <path d="M0 12 Q 25 15, 50 10 T 75 18 T 100 5" fill="none" stroke="#FF8A3D" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- MAIN BENTO GRID -->
+            <div class="grid grid-cols-12 gap-6">
+                
+                <!-- AKSES PANTAS (Left side - Large) -->
+                <div class="col-span-12 lg:col-span-8 space-y-6">
+                    <div class="glass-card p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="zap" class="w-5 h-5 mr-2 text-yellow-400"></i> AKSES PANTAS APLIKASI</h3>
+                            <a href="#" class="text-xs text-blue-400 hover:underline">Lihat Semua</a>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <!-- Card 1 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-blue-600/20 to-transparent border-blue-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-blue-500/30 rounded-lg flex items-center justify-center mb-3 text-blue-400">
+                                    <i data-lucide="book-open"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Laporan Bacaan Murid</p>
+                                <button class="w-full py-2 btn-gradient-blue text-[10px] rounded-lg font-bold">BUKA SISTEM</button>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-purple-600/20 to-transparent border-purple-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-purple-500/30 rounded-lg flex items-center justify-center mb-3 text-purple-400">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Kehadiran Mesyuarat</p>
+                                <button class="w-full py-2 btn-gradient-purple text-[10px] rounded-lg font-bold">ISI KEHADIRAN</button>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-green-600/20 to-transparent border-green-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-green-500/30 rounded-lg flex items-center justify-center mb-3 text-green-400">
+                                    <i data-lucide="shield-check"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Pengesahan Madaniat</p>
+                                <button class="w-full py-2 btn-gradient-green text-[10px] rounded-lg font-bold">SAHKAN SEKARANG</button>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-orange-600/20 to-transparent border-orange-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-orange-500/30 rounded-lg flex items-center justify-center mb-3 text-orange-400">
+                                    <i data-lucide="bar-chart-3"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">PBD Digital Sekolah</p>
+                                <button class="w-full py-2 btn-gradient-orange text-[10px] rounded-lg font-bold">BUKA PBD</button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                            <!-- Card 5 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-red-600/20 to-transparent border-red-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-red-500/30 rounded-lg flex items-center justify-center mb-3 text-red-400">
+                                    <i data-lucide="file-signature"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Surat Pelantikan Guru</p>
+                                <button class="w-full py-2 btn-gradient-red text-[10px] rounded-lg font-bold">JANA SURAT</button>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-teal-600/20 to-transparent border-teal-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-teal-500/30 rounded-lg flex items-center justify-center mb-3 text-teal-400">
+                                    <i data-lucide="id-card"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Kad Digital DELIMa</p>
+                                <button class="w-full py-2 bg-teal-600 text-[10px] rounded-lg font-bold">JANA KAD</button>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="glass-card p-4 bg-gradient-to-br from-indigo-600/20 to-transparent border-indigo-500/20 group cursor-pointer">
+                                <div class="w-10 h-10 bg-indigo-500/30 rounded-lg flex items-center justify-center mb-3 text-indigo-400">
+                                    <i data-lucide="clipboard-check"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Pencerapan Guru</p>
+                                <button class="w-full py-2 bg-indigo-600 text-[10px] rounded-lg font-bold">BUKA BORANG</button>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="glass-card p-4 bg-gray-600/10 border-gray-500/20 cursor-not-allowed opacity-60">
+                                <div class="w-10 h-10 bg-gray-500/30 rounded-lg flex items-center justify-center mb-3 text-gray-400">
+                                    <i data-lucide="rocket"></i>
+                                </div>
+                                <p class="text-sm font-semibold mb-3">Sistem Lain (Akan Datang)</p>
+                                <button class="w-full py-2 bg-gray-700 text-[10px] rounded-lg font-bold">AKAN DATANG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REPOSITORI DOKUMEN -->
+                    <div class="glass-card p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="folder" class="w-5 h-5 mr-2 text-blue-400"></i> REPOSITORI DOKUMEN TERKINI</h3>
+                            <a href="#" class="text-xs text-blue-400 hover:underline">Lihat Semua</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm">
+                                <thead class="text-gray-400 text-xs uppercase border-b border-white/10">
+                                    <tr>
+                                        <th class="py-3 font-medium">Nama Dokumen</th>
+                                        <th class="py-3 font-medium">Format</th>
+                                        <th class="py-3 font-medium text-right">Tarikh</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-white/5">
+                                    <tr class="hover:bg-white/5 transition">
+                                        <td class="py-3 flex items-center">
+                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-red-400"></i> Takwim Sekolah 2026
+                                        </td>
+                                        <td class="py-3"><span class="bg-red-500/20 text-red-400 text-[10px] px-2 py-1 rounded">PDF</span></td>
+                                        <td class="py-3 text-right text-gray-400">05/05/2026</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/5 transition">
+                                        <td class="py-3 flex items-center">
+                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-blue-400"></i> Jadual Guru Bertugas Mingguan
+                                        </td>
+                                        <td class="py-3"><span class="bg-blue-500/20 text-blue-400 text-[10px] px-2 py-1 rounded">PDF</span></td>
+                                        <td class="py-3 text-right text-gray-400">04/05/2026</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/5 transition">
+                                        <td class="py-3 flex items-center">
+                                            <i data-lucide="file-spreadsheet" class="w-4 h-4 mr-2 text-green-400"></i> Agihan Tugas Guru 2026
+                                        </td>
+                                        <td class="py-3"><span class="bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded">XLSX</span></td>
+                                        <td class="py-3 text-right text-gray-400">03/05/2026</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/5 transition">
+                                        <td class="py-3 flex items-center">
+                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-orange-400"></i> Minit Mesyuarat Kurikulum Bil.1/2026
+                                        </td>
+                                        <td class="py-3"><span class="bg-orange-500/20 text-orange-400 text-[10px] px-2 py-1 rounded">DOCX</span></td>
+                                        <td class="py-3 text-right text-gray-400">02/05/2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIDE WIDGETS (Right side) -->
+                <div class="col-span-12 lg:col-span-4 space-y-6">
+                    
+                    <!-- PENGUMUMAN PENTING -->
+                    <div class="glass-card p-6 bg-gradient-to-br from-purple-900/40 to-transparent border-purple-500/30">
+                        <div class="flex items-center gap-2 mb-4 text-purple-300">
+                            <i data-lucide="megaphone" class="w-5 h-5"></i>
+                            <h3 class="font-bold text-sm uppercase tracking-wider">Pengumuman Penting</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="status-badge bg-red-500 text-white">URGENT</span>
+                                    <span class="text-[10px] text-gray-400">31 Mei 2026</span>
+                                </div>
+                                <p class="text-sm font-semibold mb-2 leading-snug">Kemas kini PBD Fasa 2 perlu diselesaikan selewatnya 31 Mei 2026 (Jumaat).</p>
+                                <button class="w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-xs font-bold transition">BUKA PBD DIGITAL</button>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex gap-3 items-start border-b border-white/5 pb-3">
+                                    <div class="w-2 h-2 rounded-full bg-blue-400 mt-1.5"></div>
+                                    <div>
+                                        <p class="text-xs font-medium">Mesyuarat Kurikulum Bil. 2/2026</p>
+                                        <p class="text-[10px] text-gray-400">7 Mei 2026 (Khamis) | 2:30 petang</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 items-start border-b border-white/5 pb-3">
+                                    <div class="w-2 h-2 rounded-full bg-orange-400 mt-1.5"></div>
+                                    <div>
+                                        <p class="text-xs font-medium">Hari Guru 2026</p>
+                                        <p class="text-[10px] text-gray-400">Pendaftaran program dibuka!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="w-full py-2 border border-white/10 hover:bg-white/5 rounded-lg text-xs font-medium transition">LIHAT SEMUA</button>
+                        </div>
+                    </div>
+
+                    <!-- TUGASAN MINGGU INI -->
+                    <div class="glass-card p-6">
+                        <h3 class="font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+                            <i data-lucide="list-todo" class="w-5 h-5 mr-2 text-green-400"></i> Tugasan Minggu Ini
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between group cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-5 h-5 border-2 border-green-500 rounded flex items-center justify-center bg-green-500 text-white">
+                                        <i data-lucide="check" class="w-3 h-3"></i>
+                                    </div>
+                                    <span class="text-xs">Isi laporan bacaan pagi</span>
+                                </div>
+                                <span class="status-badge bg-orange-500/20 text-orange-400">WAJIB</span>
+                            </div>
+                            <div class="flex items-center justify-between group cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-5 h-5 border-2 border-white/20 rounded"></div>
+                                    <span class="text-xs">Sahkan minit mesyuarat</span>
+                                </div>
+                                <span class="status-badge bg-orange-500/20 text-orange-400">WAJIB</span>
+                            </div>
+                            <div class="flex items-center justify-between group cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-5 h-5 border-2 border-white/20 rounded"></div>
+                                    <span class="text-xs">Semak jadual bertugas</span>
+                                </div>
+                                <span class="status-badge bg-blue-500/20 text-blue-400">PENTING</span>
+                            </div>
+                            <button class="w-full py-2 mt-2 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-xs font-bold transition">LIHAT SEMUA TUGASAN</button>
+                        </div>
+                    </div>
+
+                    <!-- PINTASAN POPULAR -->
+                    <div class="glass-card p-6">
+                        <h3 class="font-bold text-sm uppercase tracking-wider mb-4">Pintasan Popular</h3>
+                        <div class="space-y-2">
+                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
+                                <i data-lucide="calendar" class="w-4 h-4 mr-3 text-orange-400"></i> Takwim Sekolah
+                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                            </a>
+                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
+                                <i data-lucide="clock" class="w-4 h-4 mr-3 text-green-400"></i> Jadual Bertugas
+                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                            </a>
+                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
+                                <i data-lucide="briefcase" class="w-4 h-4 mr-3 text-blue-400"></i> Agihan Tugas Guru
+                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="text-center py-8 opacity-50 text-xs">
+                <p>Design by Cikgu Nitya@ChatGPT &bull; &copy; 2026 SJKT Kuala Lipis</p>
+                <p class="mt-1">Gaya: Glassmorphism + Bento Grid (Moden, Bersih, Mesra Pengguna)</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple Live Clock
+        function updateClock() {
+            const now = new Date();
+            const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
+            const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+            
+            document.getElementById('clock').textContent = now.toLocaleTimeString('ms-MY', timeOptions).toUpperCase();
+            
+            // Adjust Malay date names
+            let dateStr = now.toLocaleDateString('ms-MY', dateOptions);
+            document.getElementById('date-string').textContent = dateStr;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Mobile responsiveness helper (simple toggle logic)
+        // Note: For a real app, a proper drawer would be implemented here.
+    </script>
+</body>
+</html>
