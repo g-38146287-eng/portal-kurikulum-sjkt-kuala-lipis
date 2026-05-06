@@ -3,458 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Pengurusan Kurikulum Digital - SJKT Kuala Lipis</title>
+    <title>HUB KURIKULUM DIGITAL - SJKT KUALA LIPIS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --glass-bg: rgba(30, 42, 71, 0.6);
+            --glass-bg: rgba(15, 23, 42, 0.7);
             --glass-border: rgba(255, 255, 255, 0.1);
-            --accent-purple: #6C5DD3;
-            --accent-blue: #4D7CFE;
-            --accent-green: #00D18F;
-            --accent-orange: #FF8A3D;
-            --accent-red: #FF4D6D;
+            --accent-purple: #6366f1;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
             background-attachment: fixed;
             color: white;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: translateY(-2px);
         }
 
         .sidebar-link {
             display: flex;
             align-items: center;
-            padding: 0.75rem 1rem;
-            border-radius: 0.75rem;
-            transition: all 0.2s;
-            color: rgba(255, 255, 255, 0.7);
+            padding: 0.85rem 1.25rem;
+            border-radius: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.2s;
         }
 
         .sidebar-link:hover, .sidebar-link.active {
-            background: var(--accent-purple);
-            color: white;
+            background: rgba(99, 102, 241, 0.2);
+            color: #818cf8;
+            padding-left: 1.5rem;
         }
 
-        .search-bar {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid var(--glass-border);
-            border-radius: 9999px;
-            backdrop-filter: blur(4px);
+        .admin-editable:hover {
+            outline: 2px dashed #6366f1;
+            outline-offset: 4px;
+            cursor: edit;
         }
 
-        .status-badge {
-            font-size: 0.65rem;
-            padding: 0.1rem 0.5rem;
+        [contenteditable="true"]:focus {
+            outline: 2px solid #6366f1;
+            background: rgba(0,0,0,0.2);
+            padding: 2px 5px;
             border-radius: 4px;
-            font-weight: 600;
-            text-transform: uppercase;
         }
 
-        /* Bento Grid Custom Heights */
-        .bento-container {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 1.5rem;
+        /* Pulse Animation for Urgent */
+        .pulse-red {
+            animation: pulse 2s infinite;
         }
 
-        .btn-gradient-blue { background: linear-gradient(90deg, #4D7CFE, #2563eb); }
-        .btn-gradient-purple { background: linear-gradient(90deg, #6C5DD3, #5b4dbd); }
-        .btn-gradient-green { background: linear-gradient(90deg, #00D18F, #059669); }
-        .btn-gradient-orange { background: linear-gradient(90deg, #FF8A3D, #ea580c); }
-        .btn-gradient-red { background: linear-gradient(90deg, #FF4D6D, #dc2626); }
-
-        .line-chart-svg {
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
 
-        @media (max-width: 1024px) {
-            .sidebar { display: none; }
-            .main-content { padding-left: 1rem !important; }
-        }
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
     </style>
 </head>
-<body class="p-4 md:p-6">
+<body class="p-4 lg:p-8">
 
-    <div class="flex max-w-[1600px] mx-auto gap-6 h-full">
+    <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-8">
         
         <!-- SIDEBAR -->
-        <aside class="sidebar w-64 flex-shrink-0 flex flex-col gap-6">
-            <div class="glass-card p-6 flex flex-col items-center text-center">
-                <div class="w-16 h-16 mb-4 bg-white rounded-full p-2 flex items-center justify-center overflow-hidden">
-                    <!-- Placeholder Logo Sekolah -->
-                    <img src="https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/LX4xXxZY/logo-sekolah.png' border='0' alt='logo-sekolah'></a>
+        <aside class="lg:w-72 flex-shrink-0 space-y-6">
+            <div class="glass-card p-6 text-center">
+                <div class="relative inline-block">
+                    <div class="w-20 h-20 bg-white rounded-2xl p-2 flex items-center justify-center mx-auto mb-4 overflow-hidden shadow-lg shadow-blue-500/20">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png" alt="Logo Sekolah" class="object-contain">
+                    </div>
+                    <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-[#0f172a] rounded-full"></span>
                 </div>
-                <h2 class="font-bold text-lg leading-tight">SJKT KUALA LIPIS</h2>
-                <p class="text-xs text-blue-300 mt-1">Portal Kurikulum</p>
+                <h2 class="font-bold text-lg tracking-tight">SJKT KUALA LIPIS</h2>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-semibold opacity-80">Hub Pentadbiran Digital</p>
             </div>
 
-            <nav class="glass-card p-4 flex-grow space-y-2">
+            <nav class="glass-card p-4 space-y-2">
                 <a href="#" class="sidebar-link active"><i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard</a>
-                <a href="#" class="sidebar-link"><i data-lucide="layers" class="w-5 h-5 mr-3"></i> Aplikasi <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
-                <a href="#" class="sidebar-link"><i data-lucide="folder-open" class="w-5 h-5 mr-3"></i> Dokumen <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
-                <a href="#" class="sidebar-link"><i data-lucide="calendar" class="w-5 h-5 mr-3"></i> Takwim & Jadual <i data-lucide="chevron-right" class="w-4 h-4 ml-auto"></i></a>
-                <a href="#" class="sidebar-link"><i data-lucide="users" class="w-5 h-5 mr-3"></i> Mesyuarat</a>
-                <a href="#" class="sidebar-link"><i data-lucide="graduation-cap" class="w-5 h-5 mr-3"></i> Kurikulum & PBD</a>
-                <a href="#" class="sidebar-link"><i data-lucide="eye" class="w-5 h-5 mr-3"></i> Pencerapan</a>
-                <a href="#" class="sidebar-link"><i data-lucide="clipboard-list" class="w-5 h-5 mr-3"></i> Program & OPR</a>
-                <a href="#" class="sidebar-link"><i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Pengumuman</a>
-                <a href="#" class="sidebar-link"><i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> Bantuan</a>
+                <a href="#" class="sidebar-link"><i data-lucide="folder-kanban" class="w-5 h-5 mr-3"></i> Pengurusan</a>
+                <a href="#" class="sidebar-link"><i data-lucide="file-check-2" class="w-5 h-5 mr-3"></i> Semakan PBD</a>
+                <a href="#" class="sidebar-link"><i data-lucide="archive" class="w-5 h-5 mr-3"></i> Arkib Dokumen</a>
+                <div class="pt-4 mt-4 border-t border-white/5">
+                    <p class="text-[10px] text-gray-500 ml-4 mb-2 uppercase font-bold">Admin Tools</p>
+                    <button onclick="toggleAdminMode()" id="adminBtn" class="sidebar-link w-full text-left text-yellow-500">
+                        <i data-lucide="lock" id="adminIcon" class="w-5 h-5 mr-3"></i> <span>Mod Pentadbir</span>
+                    </button>
+                    <button onclick="saveChanges()" id="saveBtn" class="sidebar-link w-full text-left text-green-500 hidden">
+                        <i data-lucide="save" class="w-5 h-5 mr-3"></i> Simpan Perubahan
+                    </button>
+                </div>
             </nav>
 
-            <div class="glass-card p-4">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 rounded-full bg-blue-500 overflow-hidden">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+            <div class="glass-card p-5 bg-gradient-to-br from-indigo-500/10 to-transparent">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500 flex items-center justify-center text-xl font-bold shadow-lg shadow-indigo-500/40">
+                        GN
                     </div>
                     <div>
-                        <p class="text-xs font-bold">Cikgu Nitya</p>
-                        <p class="text-[10px] text-gray-400">Guru Pentadbiran</p>
+                        <p class="text-sm font-bold">Cikgu Nitya</p>
+                        <p class="text-[10px] text-indigo-300">GPK Kurikulum (GPK 1)</p>
                     </div>
-                    <i data-lucide="chevron-down" class="w-4 h-4 ml-auto opacity-50"></i>
                 </div>
-                <button class="w-full py-2 bg-red-500/20 text-red-400 rounded-lg text-sm flex items-center justify-center hover:bg-red-500/30 transition">
-                    <i data-lucide="log-out" class="w-4 h-4 mr-2"></i> Log Keluar
-                </button>
             </div>
         </aside>
 
-        <!-- MAIN CONTENT -->
-        <main class="flex-grow space-y-6">
+        <!-- MAIN AREA -->
+        <main class="flex-grow space-y-8">
             
-            <!-- TOP BAR -->
-            <header class="flex items-center justify-between gap-4">
-                <div class="flex-grow max-w-2xl relative">
-                    <input type="text" placeholder="Cari aplikasi, dokumen, jadual, minit mesyuarat..." class="search-bar w-full py-3 px-12 focus:outline-none focus:ring-2 focus:ring-purple-500/50">
-                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+            <!-- SEARCH & NOTIF -->
+            <header class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="w-full md:max-w-xl relative group">
+                    <input type="text" id="mainSearch" onkeyup="searchApps()" placeholder="Cari aplikasi atau dokumen (e.g: PBD, Minit, Jadual)..." class="w-full bg-white/5 border border-white/10 py-3.5 px-14 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all text-sm group-hover:bg-white/10">
+                    <i data-lucide="search" class="absolute left-5 top-1/2 -translate-y-1/2 text-indigo-400 w-5 h-5"></i>
                 </div>
                 <div class="flex items-center gap-4">
-                    <div class="relative glass-card p-2 rounded-full cursor-pointer">
-                        <i data-lucide="bell" class="w-6 h-6"></i>
-                        <span class="absolute top-0 right-0 bg-red-500 text-[10px] w-4 h-4 flex items-center justify-center rounded-full border-2 border-[#1e293b]">3</span>
+                    <div class="glass-card p-3 rounded-xl cursor-pointer hover:bg-white/10">
+                        <i data-lucide="settings" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <div class="glass-card px-5 py-3 rounded-xl flex items-center gap-3">
+                        <div class="text-right">
+                            <p class="text-xs font-bold leading-none" id="live-time">00:00:00</p>
+                            <p class="text-[10px] text-gray-400 mt-1" id="live-date">Memuat tarikh...</p>
+                        </div>
+                        <i data-lucide="clock" class="w-5 h-5 text-indigo-400"></i>
                     </div>
                 </div>
             </header>
 
-            <!-- HERO SECTION -->
-            <section class="glass-card p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
-                
-                <div class="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
-                    <!-- Logo Utama -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield_of_Malaysia.svg/1200px-Shield_of_Malaysia.svg.png" alt="Logo" class="w-16 h-16">
-                </div>
-
-                <div class="flex-grow">
-                    <h1 class="text-3xl font-bold mb-2">Selamat datang, warga SJKT Kuala Lipis 👋</h1>
-                    <p class="text-blue-200">Portal Pengurusan Kurikulum Digital</p>
-                    <p class="text-sm text-gray-400 mt-1 font-light italic">“Satu Pusat Digital Untuk Semua Urusan Kurikulum Sekolah.”</p>
-                </div>
-
-                <div class="glass-card bg-black/20 p-4 text-center min-w-[160px]">
-                    <p class="text-2xl font-bold" id="clock">10:30 AM</p>
-                    <p class="text-xs text-gray-400" id="date-string">Selasa, 6 Mei 2026</p>
+            <!-- HERO -->
+            <section class="glass-card p-10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] -mr-48 -mt-48 transition-all group-hover:bg-indigo-600/20"></div>
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center gap-10">
+                    <div class="space-y-4 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full animate-ping"></span>
+                            SJKT Kuala Lipis Digital Hub
+                        </div>
+                        <h1 class="text-4xl font-extrabold tracking-tight leading-tight">
+                            Selamat datang, <span class="text-indigo-400">Warga SJKT Kuala Lipis.</span>
+                        </h1>
+                        <p class="text-gray-400 text-lg admin-editable" id="hero-slogan">“Satu Pusat Digital Untuk Semua Urusan Kurikulum Sekolah.”</p>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <button class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl text-sm font-bold shadow-lg shadow-indigo-600/30 transition-all">Panduan Hub</button>
+                            <button class="px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-sm font-bold transition-all">Hubungi GPK 1</button>
+                        </div>
+                    </div>
+                    <div class="flex-grow flex justify-center md:justify-end">
+                        <!-- Simple Status Card -->
+                        <div class="glass-card bg-white/5 p-6 border-white/5 text-center w-48">
+                            <p class="text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1">Status Sistem</p>
+                            <p class="text-2xl font-bold text-green-400">Stabil</p>
+                            <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                                <div class="w-[98%] h-full bg-green-400"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- STATISTICS GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 rounded-lg bg-purple-500/20 text-purple-400">
-                            <i data-lucide="grid" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold leading-none">8</p>
-                            <p class="text-xs text-gray-400">Aplikasi Aktif</p>
-                        </div>
-                    </div>
-                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
-                        <path d="M0 15 Q 10 5, 20 12 T 40 8 T 60 15 T 80 5 T 100 10" fill="none" stroke="#6C5DD3" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 rounded-lg bg-blue-500/20 text-blue-400">
-                            <i data-lucide="file-text" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold leading-none">42</p>
-                            <p class="text-xs text-gray-400">Dokumen</p>
-                        </div>
-                    </div>
-                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
-                        <path d="M0 10 Q 15 18, 30 10 T 60 5 T 100 12" fill="none" stroke="#4D7CFE" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 rounded-lg bg-green-500/20 text-green-400">
-                            <i data-lucide="check-square" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold leading-none">5</p>
-                            <p class="text-xs text-gray-400">Tugasan Minggu Ini</p>
-                        </div>
-                    </div>
-                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
-                        <path d="M0 18 Q 20 5, 40 15 T 70 8 T 100 10" fill="none" stroke="#00D18F" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="glass-card p-4 flex flex-col justify-between h-32 relative overflow-hidden">
-                    <div class="flex items-center gap-3">
-                        <div class="p-2 rounded-lg bg-orange-500/20 text-orange-400">
-                            <i data-lucide="megaphone" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold leading-none">3</p>
-                            <p class="text-xs text-gray-400">Pengumuman</p>
-                        </div>
-                    </div>
-                    <svg class="line-chart-svg h-10 w-full" viewBox="0 0 100 20">
-                        <path d="M0 12 Q 25 15, 50 10 T 75 18 T 100 5" fill="none" stroke="#FF8A3D" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- MAIN BENTO GRID -->
-            <div class="grid grid-cols-12 gap-6">
+            <!-- BENTO GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <!-- AKSES PANTAS (Left side - Large) -->
-                <div class="col-span-12 lg:col-span-8 space-y-6">
-                    <div class="glass-card p-6">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="zap" class="w-5 h-5 mr-2 text-yellow-400"></i> AKSES PANTAS APLIKASI</h3>
-                            <a href="#" class="text-xs text-blue-400 hover:underline">Lihat Semua</a>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                            <!-- Card 1 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-blue-600/20 to-transparent border-blue-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-blue-500/30 rounded-lg flex items-center justify-center mb-3 text-blue-400">
-                                    <i data-lucide="book-open"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Laporan Bacaan Murid</p>
-                                <button class="w-full py-2 btn-gradient-blue text-[10px] rounded-lg font-bold">BUKA SISTEM</button>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-purple-600/20 to-transparent border-purple-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-purple-500/30 rounded-lg flex items-center justify-center mb-3 text-purple-400">
-                                    <i data-lucide="users"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Kehadiran Mesyuarat</p>
-                                <button class="w-full py-2 btn-gradient-purple text-[10px] rounded-lg font-bold">ISI KEHADIRAN</button>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-green-600/20 to-transparent border-green-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-green-500/30 rounded-lg flex items-center justify-center mb-3 text-green-400">
-                                    <i data-lucide="shield-check"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Pengesahan Madaniat</p>
-                                <button class="w-full py-2 btn-gradient-green text-[10px] rounded-lg font-bold">SAHKAN SEKARANG</button>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-orange-600/20 to-transparent border-orange-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-orange-500/30 rounded-lg flex items-center justify-center mb-3 text-orange-400">
-                                    <i data-lucide="bar-chart-3"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">PBD Digital Sekolah</p>
-                                <button class="w-full py-2 btn-gradient-orange text-[10px] rounded-lg font-bold">BUKA PBD</button>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
-                            <!-- Card 5 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-red-600/20 to-transparent border-red-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-red-500/30 rounded-lg flex items-center justify-center mb-3 text-red-400">
-                                    <i data-lucide="file-signature"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Surat Pelantikan Guru</p>
-                                <button class="w-full py-2 btn-gradient-red text-[10px] rounded-lg font-bold">JANA SURAT</button>
-                            </div>
-                            <!-- Card 6 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-teal-600/20 to-transparent border-teal-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-teal-500/30 rounded-lg flex items-center justify-center mb-3 text-teal-400">
-                                    <i data-lucide="id-card"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Kad Digital DELIMa</p>
-                                <button class="w-full py-2 bg-teal-600 text-[10px] rounded-lg font-bold">JANA KAD</button>
-                            </div>
-                            <!-- Card 7 -->
-                            <div class="glass-card p-4 bg-gradient-to-br from-indigo-600/20 to-transparent border-indigo-500/20 group cursor-pointer">
-                                <div class="w-10 h-10 bg-indigo-500/30 rounded-lg flex items-center justify-center mb-3 text-indigo-400">
-                                    <i data-lucide="clipboard-check"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Pencerapan Guru</p>
-                                <button class="w-full py-2 bg-indigo-600 text-[10px] rounded-lg font-bold">BUKA BORANG</button>
-                            </div>
-                            <!-- Card 8 -->
-                            <div class="glass-card p-4 bg-gray-600/10 border-gray-500/20 cursor-not-allowed opacity-60">
-                                <div class="w-10 h-10 bg-gray-500/30 rounded-lg flex items-center justify-center mb-3 text-gray-400">
-                                    <i data-lucide="rocket"></i>
-                                </div>
-                                <p class="text-sm font-semibold mb-3">Sistem Lain (Akan Datang)</p>
-                                <button class="w-full py-2 bg-gray-700 text-[10px] rounded-lg font-bold">AKAN DATANG</button>
-                            </div>
-                        </div>
+                <!-- LEFT: APPLICATIONS (Main Hub) -->
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold flex items-center gap-3">
+                            <span class="w-1.5 h-6 bg-indigo-500 rounded-full"></span>
+                            Sistem & Aplikasi Digital
+                        </h3>
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Klik untuk buka</p>
                     </div>
 
-                    <!-- REPOSITORI DOKUMEN -->
-                    <div class="glass-card p-6">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="font-bold text-lg flex items-center"><i data-lucide="folder" class="w-5 h-5 mr-2 text-blue-400"></i> REPOSITORI DOKUMEN TERKINI</h3>
-                            <a href="#" class="text-xs text-blue-400 hover:underline">Lihat Semua</a>
-                        </div>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left text-sm">
-                                <thead class="text-gray-400 text-xs uppercase border-b border-white/10">
-                                    <tr>
-                                        <th class="py-3 font-medium">Nama Dokumen</th>
-                                        <th class="py-3 font-medium">Format</th>
-                                        <th class="py-3 font-medium text-right">Tarikh</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-white/5">
-                                    <tr class="hover:bg-white/5 transition">
-                                        <td class="py-3 flex items-center">
-                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-red-400"></i> Takwim Sekolah 2026
-                                        </td>
-                                        <td class="py-3"><span class="bg-red-500/20 text-red-400 text-[10px] px-2 py-1 rounded">PDF</span></td>
-                                        <td class="py-3 text-right text-gray-400">05/05/2026</td>
-                                    </tr>
-                                    <tr class="hover:bg-white/5 transition">
-                                        <td class="py-3 flex items-center">
-                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-blue-400"></i> Jadual Guru Bertugas Mingguan
-                                        </td>
-                                        <td class="py-3"><span class="bg-blue-500/20 text-blue-400 text-[10px] px-2 py-1 rounded">PDF</span></td>
-                                        <td class="py-3 text-right text-gray-400">04/05/2026</td>
-                                    </tr>
-                                    <tr class="hover:bg-white/5 transition">
-                                        <td class="py-3 flex items-center">
-                                            <i data-lucide="file-spreadsheet" class="w-4 h-4 mr-2 text-green-400"></i> Agihan Tugas Guru 2026
-                                        </td>
-                                        <td class="py-3"><span class="bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded">XLSX</span></td>
-                                        <td class="py-3 text-right text-gray-400">03/05/2026</td>
-                                    </tr>
-                                    <tr class="hover:bg-white/5 transition">
-                                        <td class="py-3 flex items-center">
-                                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-orange-400"></i> Minit Mesyuarat Kurikulum Bil.1/2026
-                                        </td>
-                                        <td class="py-3"><span class="bg-orange-500/20 text-orange-400 text-[10px] px-2 py-1 rounded">DOCX</span></td>
-                                        <td class="py-3 text-right text-gray-400">02/05/2026</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-5" id="app-grid">
+                        <!-- Apps will be rendered by JS for easy management -->
+                    </div>
+
+                    <!-- REPOSITORY SECTION -->
+                    <div class="flex items-center justify-between pt-4">
+                        <h3 class="text-xl font-bold flex items-center gap-3">
+                            <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+                            Dokumen & Repositori Penting
+                        </h3>
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Muat turun PDF</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="doc-grid">
+                        <!-- Documents will be rendered by JS -->
                     </div>
                 </div>
 
-                <!-- SIDE WIDGETS (Right side) -->
-                <div class="col-span-12 lg:col-span-4 space-y-6">
+                <!-- RIGHT: ALERTS & EVENTS -->
+                <div class="space-y-8">
                     
-                    <!-- PENGUMUMAN PENTING -->
-                    <div class="glass-card p-6 bg-gradient-to-br from-purple-900/40 to-transparent border-purple-500/30">
-                        <div class="flex items-center gap-2 mb-4 text-purple-300">
-                            <i data-lucide="megaphone" class="w-5 h-5"></i>
-                            <h3 class="font-bold text-sm uppercase tracking-wider">Pengumuman Penting</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="status-badge bg-red-500 text-white">URGENT</span>
-                                    <span class="text-[10px] text-gray-400">31 Mei 2026</span>
-                                </div>
-                                <p class="text-sm font-semibold mb-2 leading-snug">Kemas kini PBD Fasa 2 perlu diselesaikan selewatnya 31 Mei 2026 (Jumaat).</p>
-                                <button class="w-full py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-xs font-bold transition">BUKA PBD DIGITAL</button>
-                            </div>
-                            <div class="space-y-3">
-                                <div class="flex gap-3 items-start border-b border-white/5 pb-3">
-                                    <div class="w-2 h-2 rounded-full bg-blue-400 mt-1.5"></div>
-                                    <div>
-                                        <p class="text-xs font-medium">Mesyuarat Kurikulum Bil. 2/2026</p>
-                                        <p class="text-[10px] text-gray-400">7 Mei 2026 (Khamis) | 2:30 petang</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-3 items-start border-b border-white/5 pb-3">
-                                    <div class="w-2 h-2 rounded-full bg-orange-400 mt-1.5"></div>
-                                    <div>
-                                        <p class="text-xs font-medium">Hari Guru 2026</p>
-                                        <p class="text-[10px] text-gray-400">Pendaftaran program dibuka!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="w-full py-2 border border-white/10 hover:bg-white/5 rounded-lg text-xs font-medium transition">LIHAT SEMUA</button>
-                        </div>
-                    </div>
-
-                    <!-- TUGASAN MINGGU INI -->
-                    <div class="glass-card p-6">
-                        <h3 class="font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
-                            <i data-lucide="list-todo" class="w-5 h-5 mr-2 text-green-400"></i> Tugasan Minggu Ini
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold flex items-center gap-3">
+                            <span class="w-1.5 h-6 bg-rose-500 rounded-full"></span>
+                            Info & Pengumuman
                         </h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center justify-between group cursor-pointer">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-5 h-5 border-2 border-green-500 rounded flex items-center justify-center bg-green-500 text-white">
-                                        <i data-lucide="check" class="w-3 h-3"></i>
-                                    </div>
-                                    <span class="text-xs">Isi laporan bacaan pagi</span>
-                                </div>
-                                <span class="status-badge bg-orange-500/20 text-orange-400">WAJIB</span>
-                            </div>
-                            <div class="flex items-center justify-between group cursor-pointer">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-5 h-5 border-2 border-white/20 rounded"></div>
-                                    <span class="text-xs">Sahkan minit mesyuarat</span>
-                                </div>
-                                <span class="status-badge bg-orange-500/20 text-orange-400">WAJIB</span>
-                            </div>
-                            <div class="flex items-center justify-between group cursor-pointer">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-5 h-5 border-2 border-white/20 rounded"></div>
-                                    <span class="text-xs">Semak jadual bertugas</span>
-                                </div>
-                                <span class="status-badge bg-blue-500/20 text-blue-400">PENTING</span>
-                            </div>
-                            <button class="w-full py-2 mt-2 bg-green-500/10 hover:bg-green-500/20 text-green-400 rounded-lg text-xs font-bold transition">LIHAT SEMUA TUGASAN</button>
-                        </div>
                     </div>
 
-                    <!-- PINTASAN POPULAR -->
+                    <div class="glass-card p-6 bg-gradient-to-br from-rose-500/10 to-transparent border-rose-500/20 pulse-red">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2 py-0.5 bg-rose-500 text-[9px] font-bold rounded">PENTING</span>
+                            <span class="text-[10px] text-gray-400 admin-editable" id="ann-date-1">31 Mei 2026</span>
+                        </div>
+                        <h4 class="font-bold text-sm mb-2 admin-editable" id="ann-title-1">Kemas Kini PBD Fasa 2</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed admin-editable" id="ann-desc-1">Pastikan semua guru kelas mengemas kini data PBD ke dalam sistem digital sebelum tarikh tamat untuk semakan GPK 1.</p>
+                        <button class="w-full mt-4 py-2.5 bg-rose-500 hover:bg-rose-600 rounded-xl text-xs font-bold transition-all shadow-lg shadow-rose-500/20">Buka Sistem PBD</button>
+                    </div>
+
                     <div class="glass-card p-6">
-                        <h3 class="font-bold text-sm uppercase tracking-wider mb-4">Pintasan Popular</h3>
-                        <div class="space-y-2">
-                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
-                                <i data-lucide="calendar" class="w-4 h-4 mr-3 text-orange-400"></i> Takwim Sekolah
-                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Aktiviti Akan Datang</p>
+                        <div class="space-y-6" id="event-list">
+                            <!-- Events here -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 glass-card flex flex-col items-center justify-center border-white/5">
+                                    <span class="text-[10px] font-bold text-indigo-400">MEI</span>
+                                    <span class="text-sm font-bold">16</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold admin-editable">Sambutan Hari Guru 2026</p>
+                                    <p class="text-[10px] text-gray-500">Dewan Sekolah | 8:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 glass-card flex flex-col items-center justify-center border-white/5">
+                                    <span class="text-[10px] font-bold text-blue-400">JUN</span>
+                                    <span class="text-sm font-bold">02</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold admin-editable">Mesyuarat Kurikulum Bil 2</p>
+                                    <p class="text-[10px] text-gray-500">Bilik Gerakan | 2:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 py-2 border border-white/5 hover:bg-white/5 rounded-xl text-[10px] font-bold text-gray-400 uppercase tracking-widest transition-all">Lihat Takwim Penuh</button>
+                    </div>
+
+                    <!-- QUICK LINKS -->
+                    <div class="glass-card p-6 bg-indigo-600/5">
+                        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">Pautan Pantas (External)</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://delima.moe-dl.edu.my/" target="_blank" class="p-3 bg-white/5 rounded-xl text-[10px] font-bold hover:bg-white/10 transition flex items-center gap-2">
+                                <img src="https://www.moe.gov.my/images/DELIMa_Icon.png" class="w-4 h-4 grayscale group-hover:grayscale-0" alt=""> DELIMa
                             </a>
-                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
-                                <i data-lucide="clock" class="w-4 h-4 mr-3 text-green-400"></i> Jadual Bertugas
-                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                            <a href="#" class="p-3 bg-white/5 rounded-xl text-[10px] font-bold hover:bg-white/10 transition flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> SPLKPM
                             </a>
-                            <a href="#" class="flex items-center p-3 rounded-xl hover:bg-white/5 transition text-xs">
-                                <i data-lucide="briefcase" class="w-4 h-4 mr-3 text-blue-400"></i> Agihan Tugas Guru
-                                <i data-lucide="star" class="w-3 h-3 ml-auto text-yellow-500 fill-yellow-500"></i>
+                            <a href="#" class="p-3 bg-white/5 rounded-xl text-[10px] font-bold hover:bg-white/10 transition flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> e-Operasi
+                            </a>
+                            <a href="#" class="p-3 bg-white/5 rounded-xl text-[10px] font-bold hover:bg-white/10 transition flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> APDM
                             </a>
                         </div>
                     </div>
@@ -463,36 +286,167 @@
             </div>
 
             <!-- FOOTER -->
-            <footer class="text-center py-8 opacity-50 text-xs">
-                <p>Design by Cikgu Nitya@ChatGPT &bull; &copy; 2026 SJKT Kuala Lipis</p>
-                <p class="mt-1">Gaya: Glassmorphism + Bento Grid (Moden, Bersih, Mesra Pengguna)</p>
+            <footer class="pt-12 pb-6 flex flex-col items-center gap-4 opacity-40">
+                <div class="h-px w-32 bg-white/10"></div>
+                <p class="text-[10px] text-center uppercase tracking-widest">
+                    Direka dengan ❤️ oleh GPK 1 SJKT Kuala Lipis &bull; © 2026
+                </p>
             </footer>
 
         </main>
     </div>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+    <!-- NOTIFICATION BOX (Toast) -->
+    <div id="toast" class="fixed bottom-10 right-10 glass-card px-6 py-4 border-green-500/50 bg-green-500/10 transform translate-y-32 transition-all duration-500 flex items-center gap-3 z-50">
+        <i data-lucide="check-circle" class="text-green-400"></i>
+        <p class="text-sm font-bold text-green-100" id="toast-msg">Perubahan berjaya disimpan!</p>
+    </div>
 
-        // Simple Live Clock
-        function updateClock() {
-            const now = new Date();
-            const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
-            const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    <script>
+        // CONFIG DATA (Sistem Centralized)
+        // Cikgu hanya perlu tukar URL di sini sahaja nanti
+        let appData = [
+            { id: 1, name: "Laporan Bacaan", icon: "book-open", color: "text-blue-400", link: "#", desc: "Isi laporan harian murid" },
+            { id: 2, name: "Kehadiran Mesyuarat", icon: "users", color: "text-purple-400", link: "#", desc: "QR/Manual kehadiran" },
+            { id: 3, name: "Pengesahan Minit", icon: "clipboard-check", color: "text-green-400", link: "#", desc: "Sahkan maklumat" },
+            { id: 4, name: "PBD Digital", icon: "layout-list", color: "text-orange-400", link: "#", desc: "Data perkembangan murid" },
+            { id: 5, name: "Surat Pelantikan", icon: "file-signature", color: "text-rose-400", link: "#", desc: "Jana surat digital" },
+            { id: 6, name: "Kad ID Murid", icon: "id-card", color: "text-indigo-400", link: "#", desc: "Kad DELIMa digital" },
+            { id: 7, name: "Pencerapan Guru", icon: "eye", color: "text-teal-400", link: "#", desc: "Borang Standard 4 SKPMG2" },
+            { id: 8, name: "Sistem OPR", icon: "presentation", color: "text-amber-400", link: "#", desc: "Pelaporan program" }
+        ];
+
+        let docData = [
+            { id: 1, name: "Jawatankuasa Sekolah 2026", icon: "file-text", color: "text-blue-400", size: "2.4 MB" },
+            { id: 2, name: "Takwim Sekolah Terkini", icon: "calendar", color: "text-red-400", size: "1.8 MB" },
+            { id: 3, name: "Agihan Tugas Guru", icon: "briefcase", color: "text-green-400", size: "0.9 MB" },
+            { id: 4, name: "Jadual Bertugas Mingguan", icon: "clock-3", color: "text-orange-400", size: "1.2 MB" }
+        ];
+
+        let isAdmin = false;
+
+        function init() {
+            renderApps();
+            renderDocs();
+            updateTime();
+            setInterval(updateTime, 1000);
+            lucide.createIcons();
             
-            document.getElementById('clock').textContent = now.toLocaleTimeString('ms-MY', timeOptions).toUpperCase();
-            
-            // Adjust Malay date names
-            let dateStr = now.toLocaleDateString('ms-MY', dateOptions);
-            document.getElementById('date-string').textContent = dateStr;
+            // Load saved slogan from localstorage if any
+            const savedSlogan = localStorage.getItem('school-slogan');
+            if(savedSlogan) document.getElementById('hero-slogan').textContent = savedSlogan;
         }
 
-        setInterval(updateClock, 1000);
-        updateClock();
+        function renderApps(filter = '') {
+            const grid = document.getElementById('app-grid');
+            grid.innerHTML = '';
+            
+            appData.filter(app => app.name.toLowerCase().includes(filter.toLowerCase())).forEach(app => {
+                const card = document.createElement('div');
+                card.className = "glass-card p-5 group cursor-pointer hover:bg-white/10 relative";
+                card.innerHTML = `
+                    <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 ${app.color} group-hover:scale-110 transition-transform">
+                        <i data-lucide="${app.icon}"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-1">${app.name}</h4>
+                    <p class="text-[10px] text-gray-500 leading-tight">${app.desc}</p>
+                    <div class="mt-4 flex items-center justify-between">
+                         <span class="text-[9px] font-bold text-indigo-400 opacity-0 group-hover:opacity-100 transition">BUKA SISTEM →</span>
+                         <i data-lucide="external-link" class="w-3 h-3 text-gray-600"></i>
+                    </div>
+                    ${isAdmin ? `<button onclick="editApp(${app.id})" class="absolute top-2 right-2 text-yellow-500"><i data-lucide="edit-3" class="w-4 h-4"></i></button>` : ''}
+                `;
+                card.onclick = () => { if(!isAdmin) window.open(app.link, '_blank'); };
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
 
-        // Mobile responsiveness helper (simple toggle logic)
-        // Note: For a real app, a proper drawer would be implemented here.
+        function renderDocs() {
+            const grid = document.getElementById('doc-grid');
+            grid.innerHTML = '';
+            docData.forEach(doc => {
+                const item = document.createElement('div');
+                item.className = "glass-card p-4 flex items-center gap-4 hover:bg-white/10 cursor-pointer group";
+                item.innerHTML = `
+                    <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center ${doc.color}">
+                        <i data-lucide="${doc.icon}"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <p class="text-xs font-bold">${doc.name}</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest">${doc.size} &bull; PDF DOCUMENT</p>
+                    </div>
+                    <i data-lucide="download" class="w-4 h-4 text-gray-600 group-hover:text-white transition"></i>
+                `;
+                grid.appendChild(item);
+            });
+            lucide.createIcons();
+        }
+
+        function searchApps() {
+            const val = document.getElementById('mainSearch').value;
+            renderApps(val);
+        }
+
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('live-time').textContent = now.toLocaleTimeString('ms-MY', { hour12: false });
+            document.getElementById('live-date').textContent = now.toLocaleDateString('ms-MY', { weekday: 'long', day: 'numeric', month: 'long' });
+        }
+
+        function toggleAdminMode() {
+            isAdmin = !isAdmin;
+            const btn = document.getElementById('adminBtn');
+            const icon = document.getElementById('adminIcon');
+            const saveBtn = document.getElementById('saveBtn');
+            const editables = document.querySelectorAll('.admin-editable');
+
+            if(isAdmin) {
+                btn.classList.add('bg-yellow-500/20');
+                btn.querySelector('span').textContent = "Mod Edit Aktif";
+                icon.setAttribute('data-lucide', 'unlock');
+                saveBtn.classList.remove('hidden');
+                editables.forEach(el => el.setAttribute('contenteditable', 'true'));
+                showToast("Mod Pentadbir Aktif. Cikgu boleh edit teks terus pada skrin.");
+            } else {
+                btn.classList.remove('bg-yellow-500/20');
+                btn.querySelector('span').textContent = "Mod Pentadbir";
+                icon.setAttribute('data-lucide', 'lock');
+                saveBtn.classList.add('hidden');
+                editables.forEach(el => el.removeAttribute('contenteditable'));
+            }
+            renderApps(); // Refresh apps to show edit icons
+            lucide.createIcons();
+        }
+
+        function saveChanges() {
+            const slogan = document.getElementById('hero-slogan').textContent;
+            localStorage.setItem('school-slogan', slogan);
+            // In a real app, you would send this to a database
+            showToast("Semua maklumat dan pautan telah dikemas kini!");
+            toggleAdminMode();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-32');
+            setTimeout(() => toast.classList.add('translate-y-32'), 4000);
+        }
+
+        function editApp(id) {
+            const name = prompt("Masukkan nama aplikasi baru:");
+            const link = prompt("Masukkan URL pautan (e.g: https://google.com):");
+            if(name && link) {
+                const app = appData.find(a => a.id === id);
+                app.name = name;
+                app.link = link;
+                renderApps();
+                showToast("Aplikasi dikemas kini!");
+            }
+        }
+
+        window.onload = init;
     </script>
 </body>
 </html>
