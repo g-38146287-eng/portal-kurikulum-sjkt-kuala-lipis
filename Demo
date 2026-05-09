@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Kurikulum Digital SJKT Kuala Lipis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg0: #0a0e1a;
+            --bg1: #1f0954; /* Dark Indigo */
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --line: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --text-main: #ffffff;
+            --text-muted: #cbd5e1;
+            --accent: #6366f1; /* Light Indigo */
+            --sidebar-width: 230px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, var(--bg1), var(--bg0));
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Layout Container */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Style */
+        aside {
+            width: var(--sidebar-width);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid var(--glass-border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover, nav a.active {
+            background: var(--glass);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            max-width: 1400px;
+        }
+
+        /* Top Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: var(--glass);
+            border-radius: 20px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--glass-border);
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 900;
+            background: linear-gradient(to right, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .school-name {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Big Buttons Section */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-large {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 28px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-large:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent);
+        }
+
+        .btn-large i {
+            color: var(--accent);
+        }
+
+        .btn-large span {
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        /* Bento Grid Section */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(160px, auto);
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Specific Grid Spans */
+        .card-wide { grid-column: span 2; }
+        .card-tall { grid-row: span 2; }
+        .card-full { grid-column: 1 / -1; }
+
+        /* List View Component */
+        .list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .list-item:last-child { border-bottom: none; }
+
+        .item-info h4 { font-size: 0.95rem; margin-bottom: 2px; }
+        .item-info p { font-size: 0.75rem; color: var(--text-muted); }
+
+        /* Footer Bar */
+        footer {
+            margin-top: 4rem;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid var(--line);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            aside { transform: translateX(-100%); }
+            aside.open { transform: translateX(0); }
+            main { margin-left: 0; padding: 1.5rem; }
+            .menu-toggle { display: block; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .card-wide { grid-column: span 1; }
+            .action-buttons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="nav-brand">
+                <i data-lucide="layout-dashboard"></i>
+                PORTAL SJKTK
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i data-lucide="home"></i> Dashboard</a></li>
+                    <li><a href="#"><i data-lucide="layers"></i> Aplikasi</a></li>
+                    <li><a href="#"><i data-lucide="file-text"></i> Dokumen</a></li>
+                    <li><a href="#"><i data-lucide="bell"></i> Makluman</a></li>
+                    <li style="margin-top: 2rem;"><a href="#"><i data-lucide="user-cog"></i> Admin Login</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <header>
+                <div class="logo-placeholder">
+                    <i data-lucide="school" size="40"></i>
+                </div>
+                <h1>PORTAL KURIKULUM DIGITAL</h1>
+                <p class="school-name">Sekolah Jenis Kebangsaan Tamil Kuala Lipis</p>
+            </header>
+
+            <section class="action-buttons">
+                <a href="#" class="btn-large">
+                    <i data-lucide="grid" size="48"></i>
+                    <span>Gerbang Aplikasi</span>
+                </a>
+                <a href="#" class="btn-large">
+                    <i data-lucide="folder-open" size="48"></i>
+                    <span>Dokumen Sekolah</span>
+                </a>
+            </section>
+
+            <div class="bento-grid">
+                <div class="card card-wide">
+                    <div class="card-title"><i data-lucide="calendar"></i> Tugasan Minggu Ini</div>
+                    <div class="list-item">
+                        <div class="item-info">
+                            <h4>Kemasukan Data PBD</h4>
+                            <p>Tarikh akhir: Jumaat, 15 Mei</p>
+                        </div>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                    <div class="list-item">
+                        <div class="item-info">
+                            <h4>Mesyuarat Kurikulum Bil 2</h4>
+                            <p>Bilik Gerakan • 2:00 PM</p>
+                        </div>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title"><i data-lucide="bar-chart"></i> Status RPH</div>
+                    <div style="font-size: 2rem; font-weight: 800; margin-top: 10px;">98%</div>
+                    <p style="font-size: 0.7rem; color: var(--text-muted);">Selesai dihantar minggu ini</p>
+                </div>
+
+                <div class="card card-tall">
+                    <div class="card-title"><i data-lucide="link"></i> Aplikasi Luaran</div>
+                    <nav>
+                        <ul style="font-size: 0.85rem;">
+                            <li><a href="#" style="padding: 8px 0;">HRMIS 2.0</a></li>
+                            <li><a href="#" style="padding: 8px 0;">IDME / MOEIS</a></li>
+                            <li><a href="#" style="padding: 8px 0;">SPLKPM</a></li>
+                            <li><a href="#" style="padding: 8px 0;">APDM</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="card card-wide">
+                    <div class="card-title"><i data-lucide="megaphone"></i> Pengumuman</div>
+                    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-muted);">
+                        Semua guru diminta mengemas kini fail meja masing-masing sebelum hujung bulan ini untuk tujuan pemantauan dalaman.
+                    </p>
+                </div>
+            </div>
+
+            <footer>
+                @Cikgu Nitya • Portal Kurikulum Digital SJKTK Kuala Lipis
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Inisialisasi Ikon Lucide
+        lucide.createIcons();
+
+        // Fungsi Toggle Sidebar untuk Mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Tutup sidebar jika klik di luar pada mobile
+        document.addEventListener('click', (e) => {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.menu-toggle');
+            if (window.innerWidth <= 768) {
+                if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                    sidebar.classList.remove('open');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
